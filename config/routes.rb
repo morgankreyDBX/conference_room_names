@@ -1,6 +1,7 @@
 ConferenceRoomNames::Application.routes.draw do
-  get "index_page/index"
-  get "index_page/about"
+  get "users/new"
+  root 'index_page#index'
+  match '/about',        to: 'index_page#about',       via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
